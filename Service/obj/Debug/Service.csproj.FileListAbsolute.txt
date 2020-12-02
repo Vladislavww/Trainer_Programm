@@ -1,0 +1,10 @@
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Service.dll.config
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Service.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Service.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Repository.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Repository.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\obj\Debug\Service.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\obj\Debug\Service.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Entity.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Entity.pdb

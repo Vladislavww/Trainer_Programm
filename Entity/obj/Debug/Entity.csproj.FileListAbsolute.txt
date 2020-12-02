@@ -1,0 +1,5 @@
+D:\Учеба\Технологии_программирования\Trainer_programm\Entity\bin\Debug\Entity.dll.config
+D:\Учеба\Технологии_программирования\Trainer_programm\Entity\bin\Debug\Entity.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Entity\bin\Debug\Entity.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Entity\obj\Debug\Entity.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Entity\obj\Debug\Entity.pdb

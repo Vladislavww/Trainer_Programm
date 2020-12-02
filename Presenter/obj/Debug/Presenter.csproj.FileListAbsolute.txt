@@ -1,0 +1,12 @@
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\obj\Debug\Presenter.csprojResolveAssemblyReference.cache
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Presenter.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\obj\Debug\Presenter.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Presenter.dll.config
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Presenter.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\obj\Debug\Presenter.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Repository.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Service.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Repository.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Service.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Entity.dll
+D:\Учеба\Технологии_программирования\Trainer_programm\Presenter\bin\Debug\Entity.pdb
