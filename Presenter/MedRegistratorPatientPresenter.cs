@@ -68,6 +68,26 @@ namespace Presenter
             reloadView();
         }
 
+        public void setName(String name)
+        {
+            _service.setName(name);
+        }
+
+        public void setSurname(String surname)
+        {
+            _service.setSurname(surname);
+        }
+
+        public void setMiddlename(String middlename)
+        {
+            _service.setMiddlename(middlename);
+        }
+
+        public void savePatient()
+        {
+            _service.savePatient();
+        }
+
         private void calculate_checkBoxValue(patientFull.Survey.Sensors data)
         {
             _checkBoxValue = 0;

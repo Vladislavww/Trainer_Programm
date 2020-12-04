@@ -64,6 +64,7 @@
             this.middlenameTextBox.Name = "middlenameTextBox";
             this.middlenameTextBox.Size = new System.Drawing.Size(100, 20);
             this.middlenameTextBox.TabIndex = 13;
+            this.middlenameTextBox.TextChanged += new System.EventHandler(this.middlenameTextBox_TextChanged);
             // 
             // label3
             // 
@@ -80,6 +81,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 11;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // surnameTextBox
             // 
@@ -87,6 +89,7 @@
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(100, 20);
             this.surnameTextBox.TabIndex = 10;
+            this.surnameTextBox.TextChanged += new System.EventHandler(this.surnameTextBox_TextChanged);
             // 
             // label2
             // 

@@ -12,17 +12,21 @@ namespace Service
     {
         BasicRepository _repository;
         patientFull _patient;
+        bool _newPatient;
 
         public MedRegistratorPatientService(int id)
         {
             _repository = repository;
             _patient = _repository.getPatientFullDatabase(id);
+            _newPatient = false;
         }
 
         public MedRegistratorPatientService()
         {
             _repository = repository;
             _patient = new patientFull();
+            _patient.surveys = new List<patientFull.Survey>();
+            _newPatient = true;
         }
 
         public patientFull getPatient()
@@ -30,15 +34,22 @@ namespace Service
             return _patient;
         }
 
-        public void addNewPatient(patientFull data)
+        public void savePatient()
+        {
+            if (_newPatient == true)
+            {
+                addPatient();
+            }
+            else
+            {
+                changePatient();
+            }
+        }
+        /*public void addNewPatient(patientFull data)
         {
             _repository.add(data);
-        }
+        }*/
 
-        public void changePatient(patientFull data)
-        {
-            _repository.changePatientFull(data);
-        }
 
         public void deleteSurvey(int id)
         {
@@ -69,13 +80,8 @@ namespace Service
             }
             catch
             {
+                Console.WriteLine("MedRegistratorPatientServiceError: indexError");
             }
-            /*patientFull.Survey survey;
-            survey.date = date;
-            survey.type = type;
-            survey.sensors = sensors;
-            survey.id = calculateSurveyId(date, type, sensors);
-            _patient.surveys.Add(survey*/
         }
 
         public void createSurvey(String date, String type, patientFull.Survey.Sensors sensors)
@@ -86,6 +92,21 @@ namespace Service
             newSurvey.type = type;
             newSurvey.sensors = sensors;
             _patient.surveys.Add(newSurvey);
+        }
+
+        public void setName(String name)
+        {
+            _patient.name = name;
+        }
+
+        public void setSurname(String surname)
+        {
+            _patient.surname = surname;
+        }
+
+        public void setMiddlename(String middlename)
+        {
+            _patient.middlename = middlename;
         }
 
         private patientFull.Survey searchSurvey(int id)
@@ -117,6 +138,23 @@ namespace Service
         private int calculateSurveyId(String date, String type, patientFull.Survey.Sensors sensors)
         {
             return date.GetHashCode() + type.GetHashCode() + sensors.GetHashCode();
+        }
+
+        private int calculatePatientId(String name, String surname, String middlename)
+        {
+            return name.GetHashCode() + surname.GetHashCode() + middlename.GetHashCode();
+        }
+
+        private void changePatient()
+        {
+            _repository.changePatientFull(_patient);
+        }
+
+        private void addPatient()
+        {
+            _patient.id = calculatePatientId(_patient.name, _patient.surname, _patient.middlename);
+            _repository.add(_patient);
+            _newPatient = false;
         }
 
     }

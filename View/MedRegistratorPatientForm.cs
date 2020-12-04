@@ -71,8 +71,6 @@ namespace View
         {
             surveysDataGridView.Rows.Clear();
             surveysDataGridView.Columns.Clear();
-            //PatientsDataGridView.DataSource = null;
-            //PatientsDataGridView.Refresh();
         }
 
         public void fillSurveyInformation()
@@ -100,6 +98,13 @@ namespace View
 
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            if (nameTextBox.Text != null && surnameTextBox.Text != null && middlenameTextBox.Text != null)
+            {
+                _presenter.savePatient();
+            }
+            else
+            {
+            }
 
         }
 
@@ -288,6 +293,24 @@ namespace View
             {
                 _presenter._checkBoxValue -= 16;
             }
+        }
+
+        private void surnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            _presenter.setSurname(textBox.Text);
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            _presenter.setName(textBox.Text);
+        }
+
+        private void middlenameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            _presenter.setMiddlename(textBox.Text);
         }
 
     }

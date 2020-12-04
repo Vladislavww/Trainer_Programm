@@ -97,7 +97,7 @@ namespace Repository
             }
             catch
             {
-                //Error
+                Console.WriteLine("ReposiroryError: indexError");
             }
         }
 
@@ -174,7 +174,7 @@ namespace Repository
             }
             return new patientFull();
         }
-
+        
         //Search patient in database, returning full info and using limited info
         private patientFull searchPatient(patientLimited data)
         {
