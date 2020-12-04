@@ -123,9 +123,9 @@
             this.PatientNameLabel.AutoSize = true;
             this.PatientNameLabel.Location = new System.Drawing.Point(22, 264);
             this.PatientNameLabel.Name = "PatientNameLabel";
-            this.PatientNameLabel.Size = new System.Drawing.Size(114, 13);
+            this.PatientNameLabel.Size = new System.Drawing.Size(64, 13);
             this.PatientNameLabel.TabIndex = 4;
-            this.PatientNameLabel.Text = "Ivanov Ivan Ivanovich";
+            this.PatientNameLabel.Text = "Not choised";
             // 
             // MedRegistratorForm
             // 

@@ -228,8 +228,6 @@
             this.indicator1CheckBox.TabIndex = 32;
             this.indicator1CheckBox.Text = "Blood Pressure";
             this.indicator1CheckBox.UseVisualStyleBackColor = true;
-            this.indicator1CheckBox.CheckedChanged += new System.EventHandler(this.indicator1CheckBox_CheckedChanged);
-            this.indicator1CheckBox.CheckStateChanged += new System.EventHandler(this.indicator1CheckBox_CheckStateChanged);
             this.indicator1CheckBox.Click += new System.EventHandler(this.indicator1CheckBox_Click);
             // 
             // indicator2CheckBox
@@ -241,8 +239,6 @@
             this.indicator2CheckBox.TabIndex = 33;
             this.indicator2CheckBox.Text = "Skin\'s temperature";
             this.indicator2CheckBox.UseVisualStyleBackColor = true;
-            this.indicator2CheckBox.CheckedChanged += new System.EventHandler(this.indicator2CheckBox_CheckedChanged);
-            this.indicator2CheckBox.CheckStateChanged += new System.EventHandler(this.indicator2CheckBox_CheckStateChanged);
             this.indicator2CheckBox.Click += new System.EventHandler(this.indicator2CheckBox_Click);
             // 
             // indicator3CheckBox
@@ -254,8 +250,6 @@
             this.indicator3CheckBox.TabIndex = 34;
             this.indicator3CheckBox.Text = "Skin\'s humidity";
             this.indicator3CheckBox.UseVisualStyleBackColor = true;
-            this.indicator3CheckBox.CheckedChanged += new System.EventHandler(this.indicator3CheckBox_CheckedChanged);
-            this.indicator3CheckBox.CheckStateChanged += new System.EventHandler(this.indicator3CheckBox_CheckStateChanged);
             this.indicator3CheckBox.Click += new System.EventHandler(this.indicator3CheckBox_Click);
             // 
             // indicator4CheckBox
@@ -267,8 +261,6 @@
             this.indicator4CheckBox.TabIndex = 35;
             this.indicator4CheckBox.Text = "Heart rate";
             this.indicator4CheckBox.UseVisualStyleBackColor = true;
-            this.indicator4CheckBox.CheckedChanged += new System.EventHandler(this.indicator4CheckBox_CheckedChanged);
-            this.indicator4CheckBox.CheckStateChanged += new System.EventHandler(this.indicator4CheckBox_CheckStateChanged);
             this.indicator4CheckBox.Click += new System.EventHandler(this.indicator4CheckBox_Click);
             // 
             // indicator5CheckBox
@@ -280,8 +272,6 @@
             this.indicator5CheckBox.TabIndex = 36;
             this.indicator5CheckBox.Text = "Skin\'s electrical conductivity";
             this.indicator5CheckBox.UseVisualStyleBackColor = true;
-            this.indicator5CheckBox.CheckedChanged += new System.EventHandler(this.indicator5CheckBox_CheckedChanged);
-            this.indicator5CheckBox.CheckStateChanged += new System.EventHandler(this.indicator5CheckBox_CheckStateChanged);
             this.indicator5CheckBox.Click += new System.EventHandler(this.indicator5CheckBox_Click);
             // 
             // surveysDataGridView

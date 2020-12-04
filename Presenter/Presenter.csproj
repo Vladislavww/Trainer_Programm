@@ -39,8 +39,10 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoctorPresenter.cs" />
     <Compile Include="EnterPresenter.cs" />
     <Compile Include="MedRegistratorPatientPresenter.cs" />
+    <Compile Include="ViewInterfaces\IDoctorForm.cs" />
     <Compile Include="ViewInterfaces\IEnterForm.cs" />
     <Compile Include="ViewInterfaces\IMedRegistratorForm.cs" />
     <Compile Include="MedRegistratorPresenter.cs" />

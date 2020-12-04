@@ -29,10 +29,6 @@ namespace Presenter
             }
         }
 
-        /*public void exportData(String radioButtonName)
-        {
-        }*/
-
         public void callForm()
         {
             if (_chooseEnterType == 0)
@@ -45,6 +41,7 @@ namespace Presenter
             }
             else
             {
+                _view.callDoctorForm();
             }
         }
 

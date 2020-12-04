@@ -96,6 +96,11 @@ namespace View
             
         }
 
+        public void showError()
+        {
+            MessageBox.Show("Please, write full information about survey", "Warning");
+        }
+
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (nameTextBox.Text != null && surnameTextBox.Text != null && middlenameTextBox.Text != null)
@@ -143,31 +148,6 @@ namespace View
             }
         }
 
-        private void indicator1CheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator2CheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator3CheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator4CheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator5CheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void saveSureveyButton_Click(object sender, EventArgs e)
         {
             try
@@ -177,7 +157,7 @@ namespace View
             }
             catch
             {
-                MessageBox.Show("Выберите пациента");
+                MessageBox.Show("Choose a survey", "Warning");
             } 
         }
 
@@ -195,7 +175,7 @@ namespace View
             }
             catch
             {
-                MessageBox.Show("Выберите пациента");
+                MessageBox.Show("Choose a survey", "Warning");
             } 
         }
 
@@ -203,31 +183,6 @@ namespace View
         {
             TextBox textBox = (TextBox)sender;
             _presenter._dateTextboxValue = textBox.Text;
-        }
-
-        private void indicator1CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator2CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator3CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void indicator4CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void indicator5CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void indicator1CheckBox_Click(object sender, EventArgs e)

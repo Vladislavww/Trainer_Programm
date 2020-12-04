@@ -32,6 +32,11 @@ namespace View
             new MedRegistratorForm().Show();
         }
 
+        public void callDoctorForm()
+        {
+            new DoctorForm().Show();
+        }
+
         private void EnterChoiseRadioButtons_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton radioButton = (RadioButton)sender;

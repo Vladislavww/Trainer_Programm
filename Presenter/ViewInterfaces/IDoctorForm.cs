@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Presenter
 {
-    public interface IEnterForm
+    public interface IDoctorForm
     {
-        void showErrorMessage();
-        void callMedRegistratorForm();
-        void callDoctorForm();
+        void fillDataGridView(IEnumerable<String> SNMarray, IEnumerable<int> IDarray);
     }
 }

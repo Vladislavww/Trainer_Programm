@@ -58,14 +58,28 @@ namespace Presenter
 
         public void changeSurvey(int id)
         {
-            _service.changeSurvey(id, _dateTextboxValue, calculateServiceType(), calculateServiceSensors());
-            reloadView();
+            if (_dateTextboxValue != null && _checkBoxValue > 0 && _radioButtonValue > 0)
+            {
+                _service.changeSurvey(id, _dateTextboxValue, calculateServiceType(), calculateServiceSensors());
+                reloadView();
+            }
+            else
+            {
+                _view.showError();
+            }
         }
 
         public void createSurvey()
         {
-            _service.createSurvey(_dateTextboxValue, calculateServiceType(), calculateServiceSensors());
-            reloadView();
+            if (_dateTextboxValue != null && _checkBoxValue > 0 && _radioButtonValue > 0)
+            {
+                _service.createSurvey(_dateTextboxValue, calculateServiceType(), calculateServiceSensors());
+                reloadView();
+            }
+            else
+            {
+                _view.showError();
+            }
         }
 
         public void setName(String name)

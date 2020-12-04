@@ -4,38 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Service;
-using Repository;
 using Entity;
 
 namespace Presenter
 {
-    public class MedRegistratorPresenter
+    public class DoctorPresenter
     {
-        private IMedRegistratorForm _view;
-        private MedRegistratorService _service;
+        private IDoctorForm _view;
+        private DoctorService _service;
 
-        public MedRegistratorPresenter(IMedRegistratorForm view)
+        public DoctorPresenter(IDoctorForm view)
         {
             _view = view;
-            _service = new MedRegistratorService();
+            _service = new DoctorService();
         }
 
         public void initView()
         {
             IEnumerable<patientLimited> database = requestDataBase();
             _view.fillDataGridView(getSNM(database), getId(database));
-        }
-
-        public void deletePatient(int id)
-        {
-            _service.delete(id);
-            _view.deleteSelectedRow();
-        }
-
-        public void reloadView()
-        {
-            _view.clearDataGridView();
-            initView();
         }
 
         private IEnumerable<patientLimited> requestDataBase()
@@ -67,14 +54,5 @@ namespace Presenter
             return toReturn;
         }
 
-        public void callNewForm(int id)
-        {
-            _view.callMedRegistratorPatientForm(id);
-        }
-
-        public void callNewForm()
-        {
-            _view.callMedRegistratorPatientForm();
-        }
     }
 }

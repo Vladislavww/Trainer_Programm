@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Entity;
+using Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Repository;
-using Entity;
 
 namespace Service
 {
-    public class MedRegistratorService : BaseService
+    public class DoctorService : BaseService
     {
         BasicRepository _repository;
 
-        public MedRegistratorService()
+        public DoctorService()
         {
             _repository = repository;
         }
@@ -20,11 +20,6 @@ namespace Service
         public IEnumerable<patientLimited> getAllLimitedDatabase()
         {
             return _repository.getAllLimitedDatabase();
-        }
-
-        public void delete(int id)
-        {
-            _repository.delete(id);
         }
     }
 }

@@ -65,22 +65,12 @@ namespace View
             PatientsDataGridView.Columns.Clear();
         }
 
-        /*public void show()
-        {
-            this.Show();
-        }*/
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void callForm()
+        public void callMedRegistratorPatientForm()
         {
             new MedRegistratorPatientForm().Show();
         }
 
-        public void callForm(int id)
+        public void callMedRegistratorPatientForm(int id)
         {
             new MedRegistratorPatientForm(id).Show();
         }
@@ -99,9 +89,8 @@ namespace View
             }
             catch
             {
-                PatientNameLabel.Text = "Не выбрано";
+                PatientNameLabel.Text = "Not choised";
             }
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,7 +110,7 @@ namespace View
             }
             catch
             {
-                MessageBox.Show("Выберите пациента");
+                MessageBox.Show("Choose a patient", "Warning");
             }     
         }
 
@@ -134,7 +123,7 @@ namespace View
             }
             catch
             {
-                MessageBox.Show("Выберите пациента");
+                MessageBox.Show("Choose a patient", "Warning");
             }    
         }
 

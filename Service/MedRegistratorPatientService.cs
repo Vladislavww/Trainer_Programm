@@ -17,7 +17,7 @@ namespace Service
         public MedRegistratorPatientService(int id)
         {
             _repository = repository;
-            _patient = _repository.getPatientFullDatabase(id);
+            _patient = copyPatient(_repository.getPatientFullDatabase(id));
             _newPatient = false;
         }
 
@@ -137,7 +137,34 @@ namespace Service
 
         private int calculateSurveyId(String date, String type, patientFull.Survey.Sensors sensors)
         {
-            return date.GetHashCode() + type.GetHashCode() + sensors.GetHashCode();
+            int dateHash;
+            int typeHash;
+            int sensorsHash;
+            try
+            {
+                dateHash = date.GetHashCode();
+            }
+            catch
+            {
+                dateHash = 0;
+            }
+            try
+            {
+                typeHash = type.GetHashCode();
+            }
+            catch
+            {
+                typeHash = 0;
+            }
+            try
+            {
+                sensorsHash = sensors.GetHashCode();
+            }
+            catch
+            {
+                sensorsHash = 0;
+            }
+            return dateHash + typeHash + sensorsHash;
         }
 
         private int calculatePatientId(String name, String surname, String middlename)
@@ -155,6 +182,22 @@ namespace Service
             _patient.id = calculatePatientId(_patient.name, _patient.surname, _patient.middlename);
             _repository.add(_patient);
             _newPatient = false;
+        }
+
+
+        private patientFull copyPatient(patientFull toCopy)
+        {
+            patientFull toReturn = new patientFull();
+            toReturn.id = toCopy.id;
+            toReturn.surname = toCopy.surname;
+            toReturn.name = toCopy.name;
+            toReturn.middlename = toCopy.middlename;
+            toReturn.surveys = new List<patientFull.Survey>();
+            foreach (var element in toCopy.surveys)
+            {
+                toReturn.surveys.Add(element);
+            }
+            return toReturn;
         }
 
     }

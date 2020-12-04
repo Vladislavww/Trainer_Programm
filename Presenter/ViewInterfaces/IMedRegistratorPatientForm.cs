@@ -12,5 +12,6 @@ namespace Presenter
         void fillViewInformation(patientFull data);
         void clearDataGridView();
         void fillSurveyInformation();
+        void showError();
     }
 }

@@ -11,8 +11,8 @@ namespace Presenter
         void fillDataGridView(IEnumerable<String> SNMarray, IEnumerable<int> IDarray);
         void deleteSelectedRow();
         void clearDataGridView();
-        void callForm(int id);
-        void callForm();
+        void callMedRegistratorPatientForm(int id);
+        void callMedRegistratorPatientForm();
         //void show();
     }
 }
