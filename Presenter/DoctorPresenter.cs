@@ -25,6 +25,17 @@ namespace Presenter
             _view.fillDataGridView(getSNM(database), getId(database));
         }
 
+        public void callDoctorPatientForm(int id)
+        {
+            _view.callDoctorPatientForm(id);
+        }
+
+        public void reloadView()
+        {
+            _view.clearDataGridView();
+            initView();
+        }
+
         private IEnumerable<patientLimited> requestDataBase()
         {
             return _service.getAllLimitedDatabase();

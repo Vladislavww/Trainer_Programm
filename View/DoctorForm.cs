@@ -52,6 +52,17 @@ namespace View
             }
         }
 
+        public void clearDataGridView()
+        {
+            patientsDataGridView.Rows.Clear();
+            patientsDataGridView.Columns.Clear();
+        }
+
+        public void callDoctorPatientForm(int id)
+        {
+            new DoctorPatientForm(id).Show();
+        }
+
         private void showAllPatientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -69,7 +80,28 @@ namespace View
 
         private void patientsDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView dataGridView = (DataGridView)sender;
+            try
+            {
+                patientNameLabel.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
+            }
+            catch
+            {
+                patientNameLabel.Text = "Not choised";
+            }
+        }
 
+        private void choosePatientButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(patientsDataGridView.CurrentRow.Cells[0].Value.ToString());
+                _presenter.callDoctorPatientForm(id);
+            }
+            catch
+            {
+                MessageBox.Show("Choose a patient", "Warning");
+            }
         }
     }
 }

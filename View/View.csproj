@@ -53,6 +53,12 @@
     <Compile Include="DoctorForm.Designer.cs">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorPatientForm.Designer.cs">
+      <DependentUpon>DoctorPatientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DoctorPatientForm.resx">
+      <DependentUpon>DoctorPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MedRegistratorForm.resx">
       <DependentUpon>MedRegistratorForm.cs</DependentUpon>
     </EmbeddedResource>
