@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PatientStruct.cs" />
+    <Compile Include="SensorStruct.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -56,7 +56,6 @@ namespace View
         public void deleteSelectedRow()
         {
             PatientsDataGridView.Rows.Remove(PatientsDataGridView.CurrentRow);
-
         }
 
         public void clearDataGridView()
@@ -106,7 +105,7 @@ namespace View
             try
             {
                 int id = Convert.ToInt32(PatientsDataGridView.CurrentRow.Cells[0].Value.ToString());
-                _presenter.callNewForm(id);
+                _presenter.callMedRegistratorPatientForm(id);
             }
             catch
             {
@@ -129,7 +128,7 @@ namespace View
 
         private void addNewPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _presenter.callNewForm();
+            _presenter.callMedRegistratorPatientForm();
         }
 
         

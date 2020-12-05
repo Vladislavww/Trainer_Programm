@@ -44,6 +44,11 @@ namespace Presenter
             _view.fillSurveyInformation();
         }
 
+        public void callDoctorPatientSurveyForm(int id)
+        {
+            _view.callDoctorPatientSurveyForm(_service.getSurvey(id));
+        }
+
         private void calculate_checkBoxValue(patientFull.Survey.Sensors data)
         {
             _checkBoxValue = 0;

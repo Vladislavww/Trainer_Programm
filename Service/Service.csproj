@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="BaseService.cs" />
     <Compile Include="DoctorPatientService.cs" />
+    <Compile Include="DoctorPatientSurveyService.cs" />
     <Compile Include="DoctorService.cs" />
     <Compile Include="MedRegistratorPatientService.cs" />
     <Compile Include="MedRegistratorService.cs" />

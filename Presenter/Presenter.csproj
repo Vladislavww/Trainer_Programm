@@ -40,11 +40,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoctorPatientPresenter.cs" />
+    <Compile Include="DoctorPatientSurveyPresenter.cs" />
     <Compile Include="DoctorPresenter.cs" />
     <Compile Include="EnterPresenter.cs" />
     <Compile Include="MedRegistratorPatientPresenter.cs" />
     <Compile Include="ViewInterfaces\IDoctorForm.cs" />
     <Compile Include="ViewInterfaces\IDoctorPatientForm.cs" />
+    <Compile Include="ViewInterfaces\IDoctorPatientSurveyForm.cs" />
     <Compile Include="ViewInterfaces\IEnterForm.cs" />
     <Compile Include="ViewInterfaces\IMedRegistratorForm.cs" />
     <Compile Include="MedRegistratorPresenter.cs" />
@@ -67,9 +69,7 @@
       <Name>Service</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PresenterInterfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,3 +3,4 @@ D:\Учеба\Технологии_программирования\Trainer_prog
 D:\Учеба\Технологии_программирования\Trainer_programm\Entity\bin\Debug\Entity.pdb
 D:\Учеба\Технологии_программирования\Trainer_programm\Entity\obj\Debug\Entity.dll
 D:\Учеба\Технологии_программирования\Trainer_programm\Entity\obj\Debug\Entity.pdb
+D:\Учеба\Технологии_программирования\Trainer_programm\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache

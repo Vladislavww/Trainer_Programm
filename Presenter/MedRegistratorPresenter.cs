@@ -67,12 +67,12 @@ namespace Presenter
             return toReturn;
         }
 
-        public void callNewForm(int id)
+        public void callMedRegistratorPatientForm(int id)
         {
             _view.callMedRegistratorPatientForm(id);
         }
 
-        public void callNewForm()
+        public void callMedRegistratorPatientForm()
         {
             _view.callMedRegistratorPatientForm();
         }

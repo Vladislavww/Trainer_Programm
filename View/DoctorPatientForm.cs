@@ -88,6 +88,11 @@ namespace View
             
         }
 
+        public void callDoctorPatientSurveyForm(patientFull.Survey survey)
+        {
+            new DoctorPatientSurveyForm(survey).Show();
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -108,7 +113,15 @@ namespace View
 
         private void chooseSurveyButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int id = Convert.ToInt32(surveysDataGridView.CurrentRow.Cells[0].Value.ToString());
+                _presenter.callDoctorPatientSurveyForm(id);
+            }
+            catch
+            {
+                MessageBox.Show("Choose a survey", "Warning");
+            }
         }
 
     }

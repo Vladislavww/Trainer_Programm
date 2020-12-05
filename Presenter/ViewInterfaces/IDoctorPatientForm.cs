@@ -12,5 +12,6 @@ namespace Presenter
         void fillViewInformation(patientFull data);
         void fillSurveyInformation();
         void clearDataGridView();
+        void callDoctorPatientSurveyForm(patientFull.Survey survey);
     }
 }
