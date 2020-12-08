@@ -15,12 +15,18 @@ namespace View
     public partial class DoctorPatientForm : Form, IDoctorPatientForm
     {
         DoctorPatientPresenter _presenter;
+        private EnterForm _EnterView;
+        private DoctorForm _DoctorView;
+        private bool _closeWay; //true if closed by option Exit, false - otherwise
 
-        public DoctorPatientForm(int id)
+        public DoctorPatientForm(EnterForm EnterView, DoctorForm DoctorView, int id)
         {
             InitializeComponent();
             _presenter = new DoctorPatientPresenter(this, id);
             _presenter.initView();
+            _EnterView = EnterView;
+            _DoctorView = DoctorView;
+            _closeWay = false;
         }
 
         public void fillViewInformation(patientFull data)
@@ -90,12 +96,15 @@ namespace View
 
         public void callDoctorPatientSurveyForm(patientFull.Survey survey)
         {
-            new DoctorPatientSurveyForm(survey).Show();
+            new DoctorPatientSurveyForm(_EnterView, this, survey).Show();
+            this.Hide();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            _closeWay = true;
+            this.Close();
+            _DoctorView.Show();
         }
 
         private void surveysDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -121,6 +130,14 @@ namespace View
             catch
             {
                 MessageBox.Show("Choose a survey", "Warning");
+            }
+        }
+
+        private void DoctorPatientForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_closeWay == false)
+            {
+                _EnterView.Close();
             }
         }
 

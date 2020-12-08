@@ -120,6 +120,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "DoctorForm";
             this.Text = "DoctorForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

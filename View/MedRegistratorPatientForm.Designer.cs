@@ -340,6 +340,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MedRegistratorPatientForm";
             this.Text = "MedRegistratorPatientForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MedRegistratorPatientForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.surveysDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

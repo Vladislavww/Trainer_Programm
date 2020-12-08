@@ -232,6 +232,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // middlenameTextBox
             // 
@@ -293,6 +294,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DoctorPatientForm";
             this.Text = "DoctorPatientForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorPatientForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.surveysDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -15,20 +15,28 @@ namespace View
     public partial class MedRegistratorPatientForm : Form, IMedRegistratorPatientForm
     {
         MedRegistratorPatientPresenter _presenter;
+        MedRegistratorForm _MedRegistratorView;
+        EnterForm _EnterView;
+        private bool _closeWay; //true if closed by option Exit, false - otherwise
 
-        public MedRegistratorPatientForm()
+        public MedRegistratorPatientForm(MedRegistratorForm MedRegistratorView, EnterForm EnterView)
         {
             InitializeComponent();
             _presenter = new MedRegistratorPatientPresenter(this);
             _presenter.initView();
-
+            _MedRegistratorView = MedRegistratorView;
+            _EnterView = EnterView;
+            _closeWay = false;
         }
 
-        public MedRegistratorPatientForm(int id)
+        public MedRegistratorPatientForm(MedRegistratorForm MedRegistratorView, EnterForm EnterView, int id)
         {
             InitializeComponent();
             _presenter = new MedRegistratorPatientPresenter(this, id);
             _presenter.initView();
+            _MedRegistratorView = MedRegistratorView;
+            _EnterView = EnterView;
+            _closeWay = false;
         }
 
         public void fillViewInformation(patientFull data)
@@ -109,13 +117,16 @@ namespace View
             }
             else
             {
+                //?!
             }
 
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            _closeWay = true;
+            this.Close();
+            _MedRegistratorView.Show();
         }
 
         private void surveysGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -128,6 +139,7 @@ namespace View
             }
             catch
             {
+                //Clear all checkBoxes and radioButtons
             }
         }
 
@@ -266,6 +278,14 @@ namespace View
         {
             TextBox textBox = (TextBox)sender;
             _presenter.setMiddlename(textBox.Text);
+        }
+
+        private void MedRegistratorPatientForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_closeWay == false)
+            {
+                _EnterView.Close();
+            }
         }
 
     }

@@ -14,12 +14,16 @@ namespace View
     public partial class MedRegistratorForm : Form, IMedRegistratorForm
     {
         private MedRegistratorPresenter _presenter;
+        private EnterForm _EnterView;
+        private bool _closeWay; //true if closed by option Exit, false - otherwise
 
-        public MedRegistratorForm()
+        public MedRegistratorForm(EnterForm enterView)
         {
             InitializeComponent();
             _presenter = new MedRegistratorPresenter(this);
             _presenter.initView();
+            _EnterView = enterView;
+            _closeWay = false;
         }
 
 
@@ -66,12 +70,14 @@ namespace View
 
         public void callMedRegistratorPatientForm()
         {
-            new MedRegistratorPatientForm().Show();
+            new MedRegistratorPatientForm(this, _EnterView).Show();
+            this.Hide();
         }
 
         public void callMedRegistratorPatientForm(int id)
         {
-            new MedRegistratorPatientForm(id).Show();
+            new MedRegistratorPatientForm(this, _EnterView, id).Show();
+            this.Hide();
         }
 
         private void showAllPatientsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +100,9 @@ namespace View
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _closeWay = true;
+            this.Close();
+            _EnterView.Show();
         }
 
         private void searchPatientToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -129,6 +138,14 @@ namespace View
         private void addNewPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _presenter.callMedRegistratorPatientForm();
+        }
+
+        private void MedRegistratorForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_closeWay == false)
+            {
+                _EnterView.Close();
+            }
         }
 
         

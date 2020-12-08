@@ -29,12 +29,14 @@ namespace View
 
         public void callMedRegistratorForm()
         {
-            new MedRegistratorForm().Show();
+            new MedRegistratorForm(this).Show();
+            this.Hide();
         }
 
         public void callDoctorForm()
         {
-            new DoctorForm().Show();
+            new DoctorForm(this).Show();
+            this.Hide();
         }
 
         private void EnterChoiseRadioButtons_CheckedChanged(object sender, EventArgs e)

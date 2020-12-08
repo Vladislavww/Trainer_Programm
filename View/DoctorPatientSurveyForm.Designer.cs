@@ -200,6 +200,7 @@
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // sensorsDataGridView
             // 
@@ -234,6 +235,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "DoctorPatientSurveyForm";
             this.Text = "DoctorPatientSurveyForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorPatientSurveyForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sensorsDataGridView)).EndInit();

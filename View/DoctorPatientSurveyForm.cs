@@ -15,12 +15,18 @@ namespace View
     public partial class DoctorPatientSurveyForm : Form, IDoctorPatientSurveyForm
     {
         DoctorPatientSurveyPresenter _presenter;
+        private EnterForm _EnterView;
+        private DoctorPatientForm _DoctorPatientView;
+        private bool _closeWay; //true if closed by option Exit, false - otherwise
 
-        public DoctorPatientSurveyForm(patientFull.Survey survey)
+        public DoctorPatientSurveyForm(EnterForm EnterView, DoctorPatientForm DoctorPatientView, patientFull.Survey survey)
         {
             InitializeComponent();
             _presenter = new DoctorPatientSurveyPresenter(this, survey);
             _presenter.initView();
+            _EnterView = EnterView;
+            _DoctorPatientView = DoctorPatientView;
+            _closeWay = false;
         }
 
         public void fillSensorsDataGridView()
@@ -114,6 +120,21 @@ namespace View
             {
                 MessageBox.Show("Choose a sensor", "Warning");
             }    
+        }
+
+        private void DoctorPatientSurveyForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_closeWay == false)
+            {
+                _EnterView.Close();
+            }
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _closeWay = true;
+            this.Close();
+            _DoctorPatientView.Show();
         }
     }
 }
