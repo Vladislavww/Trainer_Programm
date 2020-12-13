@@ -9,15 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presenter;
 using Entity;
+using System.Windows.Forms.DataVisualization.Charting;
+using EmulationGraphicData;
 
 namespace View
 {
     public partial class DoctorPatientSurveyForm : Form, IDoctorPatientSurveyForm
     {
-        DoctorPatientSurveyPresenter _presenter;
+        private DoctorPatientSurveyPresenter _presenter;
         private EnterForm _EnterView;
         private DoctorPatientForm _DoctorPatientView;
         private bool _closeWay; //true if closed by option Exit, false - otherwise
+        private List<Series> _chartPointsList;
+        public AddDot _delegate;
 
         public DoctorPatientSurveyForm(EnterForm EnterView, DoctorPatientForm DoctorPatientView, patientFull.Survey survey)
         {
@@ -27,6 +31,8 @@ namespace View
             _EnterView = EnterView;
             _DoctorPatientView = DoctorPatientView;
             _closeWay = false;
+            _chartPointsList = new List<Series>();
+            _delegate = new AddDot(addDot);
         }
 
         public void fillSensorsDataGridView()
@@ -42,6 +48,31 @@ namespace View
             {
                 sensorTypeComboBox.Items.Add(element);
             }
+        }
+
+        public void addChart(String name, String type)
+        {
+            Chart newChart = new Chart();
+            newChart.Dock = DockStyle.Fill;
+            newChart.Titles.Add(name + "-" + type);
+            newChart.ChartAreas.Add(new ChartArea(name));
+            Series newSeriesOfPoint = new Series();
+            newSeriesOfPoint.ChartType = SeriesChartType.Line;
+            newSeriesOfPoint.ChartArea = name;
+            newChart.Series.Add(newSeriesOfPoint);
+            chartTableLayoutPanel.Controls.Add(newChart);
+            _chartPointsList.Add(newSeriesOfPoint);
+        }
+
+        public void removeCharts()
+        {
+            _chartPointsList.Clear();
+            chartTableLayoutPanel.Controls.Clear();
+        }
+
+        public void addDotToChart(double x, double y, int chartIndex)
+        {
+            Invoke(_delegate, x, y, chartIndex);
         }
 
         public void showNewSensorError()
@@ -72,6 +103,11 @@ namespace View
         public void activateSelectedSensor()
         {
             sensorsDataGridView.CurrentRow.Cells[2].Value = "OK";
+        }
+
+        private void addDot(double x, double y, int chartIndex)
+        {
+            _chartPointsList[chartIndex].Points.AddXY(x, y);
         }
 
         private void addSensorButton_Click(object sender, EventArgs e)
@@ -124,6 +160,7 @@ namespace View
 
         private void DoctorPatientSurveyForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            _presenter.stopSurvey();
             if (_closeWay == false)
             {
                 _EnterView.Close();
@@ -132,9 +169,15 @@ namespace View
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _presenter.stopSurvey();
             _closeWay = true;
             this.Close();
             _DoctorPatientView.Show();
+        }
+
+        private void startAndStopSurveyButton4_Click(object sender, EventArgs e)
+        {
+            _presenter.changeSurveyGoing();
         }
     }
 }

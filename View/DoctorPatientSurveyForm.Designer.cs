@@ -46,6 +46,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sensorsDataGridView = new System.Windows.Forms.DataGridView();
+            this.chartTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sensorsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             this.startAndStopSurveyButton4.TabIndex = 37;
             this.startAndStopSurveyButton4.Text = "Start/stop survey";
             this.startAndStopSurveyButton4.UseVisualStyleBackColor = true;
+            this.startAndStopSurveyButton4.Click += new System.EventHandler(this.startAndStopSurveyButton4_Click);
             // 
             // sensorTypeComboBox
             // 
@@ -211,11 +213,25 @@
             this.sensorsDataGridView.TabIndex = 38;
             this.sensorsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sensorsDataGridView_CellClick);
             // 
+            // chartTableLayoutPanel
+            // 
+            this.chartTableLayoutPanel.ColumnCount = 2;
+            this.chartTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.chartTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.chartTableLayoutPanel.Location = new System.Drawing.Point(88, 316);
+            this.chartTableLayoutPanel.Name = "chartTableLayoutPanel";
+            this.chartTableLayoutPanel.RowCount = 2;
+            this.chartTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.chartTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.chartTableLayoutPanel.Size = new System.Drawing.Size(753, 216);
+            this.chartTableLayoutPanel.TabIndex = 41;
+            // 
             // DoctorPatientSurveyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 637);
+            this.Controls.Add(this.chartTableLayoutPanel);
             this.Controls.Add(this.sensorsDataGridView);
             this.Controls.Add(this.startAndStopSurveyButton4);
             this.Controls.Add(this.sensorTypeComboBox);
@@ -264,5 +280,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.DataGridView sensorsDataGridView;
+        private System.Windows.Forms.TableLayoutPanel chartTableLayoutPanel;
     }
 }

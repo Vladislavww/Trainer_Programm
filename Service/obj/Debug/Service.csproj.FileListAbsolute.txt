@@ -8,3 +8,5 @@ D:\Учеба\Технологии_программирования\Trainer_prog
 D:\Учеба\Технологии_программирования\Trainer_programm\Service\obj\Debug\Service.pdb
 D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Entity.dll
 D:\Учеба\Технологии_программирования\Trainer_programm\Service\bin\Debug\Entity.pdb
+D:\Учеба\Технологии_программирования\Trainer_Programm\Service\bin\Debug\EmulationGraphicData.dll
+D:\Учеба\Технологии_программирования\Trainer_Programm\Service\bin\Debug\EmulationGraphicData.pdb

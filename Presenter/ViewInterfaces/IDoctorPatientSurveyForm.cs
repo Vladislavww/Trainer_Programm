@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,8 @@ namespace Presenter
         void showNameSensorError();
         void deleteSelectedRow();
         void activateSelectedSensor();
+        void addChart(String name, String type);
+        void removeCharts();
+        void addDotToChart(double x, double y, int chartNum);
     }
 }

@@ -1,0 +1,8 @@
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\bin\Debug\EmulationGraphicData.dll.config
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\bin\Debug\EmulationGraphicData.dll
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\bin\Debug\EmulationGraphicData.pdb
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\obj\Debug\EmulationGraphicData.dll
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\obj\Debug\EmulationGraphicData.pdb
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\obj\Debug\EmulationGraphicData.csprojResolveAssemblyReference.cache
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\bin\Debug\Entity.dll
+D:\Учеба\Технологии_программирования\Trainer_Programm\EmulationGraphicData\bin\Debug\Entity.pdb

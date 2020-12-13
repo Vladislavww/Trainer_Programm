@@ -47,6 +47,10 @@
     <Compile Include="MedRegistratorService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmulationGraphicData\EmulationGraphicData.csproj">
+      <Project>{EAA6FAEF-B68E-4F52-AE52-2EEB0AE3FB7C}</Project>
+      <Name>EmulationGraphicData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{7E03BBFF-E676-42BA-9E4C-0AB8D72EDC50}</Project>
       <Name>Entity</Name>

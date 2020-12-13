@@ -19,3 +19,5 @@ D:\Учеба\Технологии_программирования\Trainer_prog
 D:\Учеба\Технологии_программирования\Trainer_programm\View\obj\Debug\View.DoctorPatientForm.resources
 D:\Учеба\Технологии_программирования\Trainer_programm\View\obj\Debug\View.DoctorPatientSurveyForm.resources
 D:\Учеба\Технологии_программирования\Trainer_programm\View\obj\Debug\View.DoctorForm.resources
+D:\Учеба\Технологии_программирования\Trainer_Programm\View\bin\Debug\EmulationGraphicData.dll
+D:\Учеба\Технологии_программирования\Trainer_Programm\View\bin\Debug\EmulationGraphicData.pdb

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmulationGraphicData;
 
 namespace Service
 {
@@ -11,12 +12,22 @@ namespace Service
     {
         patientFull.Survey _survey;
         List<SensorStruct> _sensors;
+        IDoctorPatientSurveyPresenter _presenter;
+        List<DoctorPatientSurveyGraphic> _pointSources;
 
-        public DoctorPatientSurveyService(patientFull.Survey survey)
+        public DoctorPatientSurveyService(IDoctorPatientSurveyPresenter presenter, patientFull.Survey survey)
+        {
+            _survey = survey;
+            _presenter = presenter;
+            _sensors = new List<SensorStruct>();
+            _pointSources = new List<DoctorPatientSurveyGraphic>();
+        }
+
+        /*public DoctorPatientSurveyService(patientFull.Survey survey)
         {
             _survey = survey;
             _sensors = new List<SensorStruct>();
-        }
+        }*/
 
         public IEnumerable<String> getSensorsType()
         {
@@ -58,6 +69,30 @@ namespace Service
             _sensors.Remove(searchSensor(name));
         }
 
+        public void startSurvey()
+        {
+            int index = 0;
+            foreach (var element in _sensors)
+            {
+                if (element.condition == true)
+                {
+                    DoctorPatientSurveyGraphic newPointSource = new DoctorPatientSurveyGraphic(_presenter, index);
+                    _pointSources.Add(newPointSource);
+                    newPointSource.startWritingGraphic();
+                    index += 1;
+                }
+            }
+        }
+
+        public void stopSurvey()
+        {
+            foreach (var element in _pointSources)
+            {
+                element.stopWritingGraphic();
+            }
+            _pointSources.Clear();
+        }
+
         public bool checkName(String name)
         {
             if (searchSensor(name).name == null)
@@ -81,6 +116,20 @@ namespace Service
                 Console.WriteLine("DoctorPatientSurveyServiceError: index error");
             }
         }
+
+        public IEnumerable<SensorStruct> getActivatedSensors()
+        {
+            List<SensorStruct> toReturn = new List<SensorStruct>();
+            foreach (var element in _sensors)
+            {
+                if (element.condition == true)
+                {
+                    toReturn.Add(element);
+                }
+            }
+            return toReturn;
+        }
+
         private SensorStruct searchSensor(String name)
         {
             foreach(var element in _sensors)
