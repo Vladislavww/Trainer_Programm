@@ -13,5 +13,7 @@ namespace Presenter
         void clearDataGridView();
         void fillSurveyInformation();
         void showError();
+        void showOkSaveMessage();
+        void showFailedSaveMessage();
     }
 }

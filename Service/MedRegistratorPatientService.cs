@@ -13,12 +13,14 @@ namespace Service
         BasicRepository _repository;
         patientFull _patient;
         bool _newPatient;
+        bool _succesfullPatientInfoSaving;
 
         public MedRegistratorPatientService(int id)
         {
             _repository = repository;
             _patient = copyPatient(_repository.getPatientFullDatabase(id));
             _newPatient = false;
+            _succesfullPatientInfoSaving = false;
         }
 
         public MedRegistratorPatientService()
@@ -27,6 +29,7 @@ namespace Service
             _patient = new patientFull();
             _patient.surveys = new List<patientFull.Survey>();
             _newPatient = true;
+            _succesfullPatientInfoSaving = false;
         }
 
         public patientFull getPatient()
@@ -45,11 +48,6 @@ namespace Service
                 changePatient();
             }
         }
-        /*public void addNewPatient(patientFull data)
-        {
-            _repository.add(data);
-        }*/
-
 
         public void deleteSurvey(int id)
         {
@@ -107,6 +105,11 @@ namespace Service
         public void setMiddlename(String middlename)
         {
             _patient.middlename = middlename;
+        }
+
+        public bool getPatientInfoSaving()
+        {
+            return _succesfullPatientInfoSaving;
         }
 
         private patientFull.Survey searchSurvey(int id)
@@ -174,14 +177,30 @@ namespace Service
 
         private void changePatient()
         {
-            _repository.changePatientFull(_patient);
+            try
+            {
+                _repository.changePatientFull(_patient);
+                _succesfullPatientInfoSaving = true;
+            }
+            catch
+            {
+                _succesfullPatientInfoSaving = false;
+            }
         }
 
         private void addPatient()
         {
-            _patient.id = calculatePatientId(_patient.name, _patient.surname, _patient.middlename);
-            _repository.add(_patient);
-            _newPatient = false;
+            try
+            {
+                _patient.id = calculatePatientId(_patient.name, _patient.surname, _patient.middlename);
+                _repository.add(_patient);
+                _newPatient = false;
+                _succesfullPatientInfoSaving = true;
+            }
+            catch
+            {
+                _succesfullPatientInfoSaving = false;
+            }
         }
 
 

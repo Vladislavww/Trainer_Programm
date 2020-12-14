@@ -59,7 +59,7 @@
             this.startAndStopSurveyButton4.TabIndex = 37;
             this.startAndStopSurveyButton4.Text = "Start/stop survey";
             this.startAndStopSurveyButton4.UseVisualStyleBackColor = true;
-            this.startAndStopSurveyButton4.Click += new System.EventHandler(this.startAndStopSurveyButton4_Click);
+            this.startAndStopSurveyButton4.Click += new System.EventHandler(this.startAndStopSurveyButton_Click);
             // 
             // sensorTypeComboBox
             // 

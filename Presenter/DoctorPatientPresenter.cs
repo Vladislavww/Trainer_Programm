@@ -13,20 +13,20 @@ namespace Presenter
         DoctorPatientService _service;
         IDoctorPatientForm _view;
         public byte _radioButtonValue;
-        public byte _checkBoxValue;
+        public CheckBoxCounter _checkBoxCounter;
         public String _dateTextboxValue;
 
         public DoctorPatientPresenter(IDoctorPatientForm view, int id)
         {
             _service = new DoctorPatientService(id);
             _view = view;
+            _checkBoxCounter = new CheckBoxCounter();
         }
 
         public void initView()
         {
             _view.fillViewInformation(_service.getPatient());
             _radioButtonValue = 0;
-            _checkBoxValue = 0;
         }
 
         public void reloadView()
@@ -51,26 +51,26 @@ namespace Presenter
 
         private void calculate_checkBoxValue(patientFull.Survey.Sensors data)
         {
-            _checkBoxValue = 0;
+            _checkBoxCounter.setNullValue();
             if (data.sensor1 == true)
             {
-                _checkBoxValue += 1;
+                _checkBoxCounter.changeValueCheckBox(1);
             }
             if (data.sensor2 == true)
             {
-                _checkBoxValue += 2;
+                _checkBoxCounter.changeValueCheckBox(2);
             }
             if (data.sensor3 == true)
             {
-                _checkBoxValue += 4;
+                _checkBoxCounter.changeValueCheckBox(3);
             }
             if (data.sensor4 == true)
             {
-                _checkBoxValue += 8;
+                _checkBoxCounter.changeValueCheckBox(4);
             }
             if (data.sensor5 == true)
             {
-                _checkBoxValue += 16;
+                _checkBoxCounter.changeValueCheckBox(5);
             }
         }
 
@@ -109,13 +109,12 @@ namespace Presenter
 
         private patientFull.Survey.Sensors calculateServiceSensors()
         {
-            //bool sensor1, sensor2, sensor3, sensor4, sensor5;
             patientFull.Survey.Sensors sensors;
-            sensors.sensor1 = (_checkBoxValue & 1) == 1;
-            sensors.sensor2 = (_checkBoxValue & 2) == 2;
-            sensors.sensor3 = (_checkBoxValue & 4) == 4;
-            sensors.sensor4 = (_checkBoxValue & 8) == 8;
-            sensors.sensor5 = (_checkBoxValue & 16) == 16;
+            sensors.sensor1 = _checkBoxCounter.getValueCheckBox(1);
+            sensors.sensor2 = _checkBoxCounter.getValueCheckBox(2);
+            sensors.sensor3 = _checkBoxCounter.getValueCheckBox(3);
+            sensors.sensor4 = _checkBoxCounter.getValueCheckBox(4);
+            sensors.sensor5 = _checkBoxCounter.getValueCheckBox(5);
             return sensors;
         }
     }

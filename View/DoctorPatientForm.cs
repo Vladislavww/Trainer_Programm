@@ -86,12 +86,11 @@ namespace View
             {
                 strengthRadioButton.Select();
             }
-            indicator1CheckBox.Checked = (_presenter._checkBoxValue & 1) == 1;
-            indicator2CheckBox.Checked = (_presenter._checkBoxValue & 2) == 2;
-            indicator3CheckBox.Checked = (_presenter._checkBoxValue & 4) == 4;
-            indicator4CheckBox.Checked = (_presenter._checkBoxValue & 8) == 8;
-            indicator5CheckBox.Checked = (_presenter._checkBoxValue & 16) == 16;
-            
+            indicatorBloodPressureCheckBox.Checked = _presenter._checkBoxCounter.getBloodPressureValueCheckBox();
+            indicatorSkinTemperatureCheckBox.Checked = _presenter._checkBoxCounter.getSkinTemperatureValueCheckBox();
+            indicatorSkinHumidityCheckBox.Checked = _presenter._checkBoxCounter.getSkinHumidityValueCheckBox();
+            indicatorHeartRateCheckBox.Checked = _presenter._checkBoxCounter.getHeartRateValueCheckBox();
+            indicatorSkinElectricalConductivityCheckBox.Checked = _presenter._checkBoxCounter.getSkinElectrincalConductivityValueCheckBox();  
         }
 
         public void callDoctorPatientSurveyForm(patientFull.Survey survey)

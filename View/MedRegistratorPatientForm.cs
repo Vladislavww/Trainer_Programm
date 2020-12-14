@@ -96,17 +96,26 @@ namespace View
             {
                 strengthRadioButton.Select();
             }
-            indicator1CheckBox.Checked = (_presenter._checkBoxValue & 1) == 1;
-            indicator2CheckBox.Checked = (_presenter._checkBoxValue & 2) == 2;
-            indicator3CheckBox.Checked = (_presenter._checkBoxValue & 4) == 4;
-            indicator4CheckBox.Checked = (_presenter._checkBoxValue & 8) == 8;
-            indicator5CheckBox.Checked = (_presenter._checkBoxValue & 16) == 16;
-            
+            indicatorBloodPressureCheckBox.Checked = _presenter._checkBoxCounter.getBloodPressureValueCheckBox();
+            indicatorSkinTemperatureCheckBox.Checked = _presenter._checkBoxCounter.getSkinTemperatureValueCheckBox();
+            indicatorSkinHumidityCheckBox.Checked = _presenter._checkBoxCounter.getSkinHumidityValueCheckBox();
+            indicatorHeartRateCheckBox.Checked = _presenter._checkBoxCounter.getHeartRateValueCheckBox();
+            indicatorSkinElectricalConductivityCheckBox.Checked = _presenter._checkBoxCounter.getSkinElectrincalConductivityValueCheckBox(); 
         }
 
         public void showError()
         {
             MessageBox.Show("Please, write full information about survey", "Warning");
+        }
+
+        public void showOkSaveMessage()
+        {
+            MessageBox.Show("Saved succesfull", "Message");
+        }
+
+        public void showFailedSaveMessage()
+        {
+            MessageBox.Show("Failed to save", "Warning");
         }
 
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -117,7 +126,7 @@ namespace View
             }
             else
             {
-                //?!
+                showError();
             }
 
         }
@@ -140,6 +149,17 @@ namespace View
             catch
             {
                 //Clear all checkBoxes and radioButtons
+                walkRadioButton.Checked = false;
+                runRadioButton.Checked = false;
+                strengthRadioButton.Checked = false;
+                _presenter._radioButtonValue = 0;
+                indicatorBloodPressureCheckBox.Checked = false;
+                indicatorSkinTemperatureCheckBox.Checked = false;
+                indicatorSkinHumidityCheckBox.Checked = false;
+                indicatorHeartRateCheckBox.Checked = false;
+                indicatorSkinElectricalConductivityCheckBox.Checked = false;
+                _presenter._checkBoxCounter.setNullValue();
+                dateTextBox.Text = "";
             }
         }
 
@@ -197,69 +217,29 @@ namespace View
             _presenter._dateTextboxValue = textBox.Text;
         }
 
-        private void indicator1CheckBox_Click(object sender, EventArgs e)
+        private void indicatorBloodPressureCheckBox_Click(object sender, EventArgs e)
         {
-            CheckBox checkbox = (CheckBox)sender;
-            if (checkbox.Checked == true)
-            {
-                _presenter._checkBoxValue += 1;
-            }
-            else
-            {
-                _presenter._checkBoxValue -= 1;
-            }
+            _presenter._checkBoxCounter.changeBloodPressureValueCheckBox();
         }
 
-        private void indicator2CheckBox_Click(object sender, EventArgs e)
+        private void indicatorSkinTemperatureCheckBox_Click(object sender, EventArgs e)
         {
-            CheckBox checkbox = (CheckBox)sender;
-            if (checkbox.Checked == true)
-            {
-                _presenter._checkBoxValue += 2;
-            }
-            else
-            {
-                _presenter._checkBoxValue -= 2;
-            }
+            _presenter._checkBoxCounter.changeSkinTemperatureValueCheckBox();
         }
 
-        private void indicator3CheckBox_Click(object sender, EventArgs e)
+        private void indicatorSkinHumidityCheckBox_Click(object sender, EventArgs e)
         {
-            CheckBox checkbox = (CheckBox)sender;
-            if (checkbox.Checked == true)
-            {
-                _presenter._checkBoxValue += 4;
-            }
-            else
-            {
-                _presenter._checkBoxValue -= 4;
-            }
+            _presenter._checkBoxCounter.changeSkinHumidityValueCheckBox();
         }
 
-        private void indicator4CheckBox_Click(object sender, EventArgs e)
+        private void indicatorHeartRateCheckBox_Click(object sender, EventArgs e)
         {
-            CheckBox checkbox = (CheckBox)sender;
-            if (checkbox.Checked == true)
-            {
-                _presenter._checkBoxValue += 8;
-            }
-            else
-            {
-                _presenter._checkBoxValue -= 8;
-            }
+            _presenter._checkBoxCounter.changeHeartRateValueCheckBox();
         }
 
-        private void indicator5CheckBox_Click(object sender, EventArgs e)
+        private void indicatorSkinElectrincalConductivityCheckBox_Click(object sender, EventArgs e)
         {
-            CheckBox checkbox = (CheckBox)sender;
-            if (checkbox.Checked == true)
-            {
-                _presenter._checkBoxValue += 16;
-            }
-            else
-            {
-                _presenter._checkBoxValue -= 16;
-            }
+            _presenter._checkBoxCounter.changeSkinElectrincalConductivityValueCheckBox();
         }
 
         private void surnameTextBox_TextChanged(object sender, EventArgs e)

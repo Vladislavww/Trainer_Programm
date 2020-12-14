@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.surveysDataGridView = new System.Windows.Forms.DataGridView();
-            this.indicator5CheckBox = new System.Windows.Forms.CheckBox();
-            this.indicator4CheckBox = new System.Windows.Forms.CheckBox();
-            this.indicator3CheckBox = new System.Windows.Forms.CheckBox();
-            this.indicator2CheckBox = new System.Windows.Forms.CheckBox();
-            this.indicator1CheckBox = new System.Windows.Forms.CheckBox();
+            this.indicatorSkinElectricalConductivityCheckBox = new System.Windows.Forms.CheckBox();
+            this.indicatorHeartRateCheckBox = new System.Windows.Forms.CheckBox();
+            this.indicatorSkinHumidityCheckBox = new System.Windows.Forms.CheckBox();
+            this.indicatorSkinTemperatureCheckBox = new System.Windows.Forms.CheckBox();
+            this.indicatorBloodPressureCheckBox = new System.Windows.Forms.CheckBox();
             this.strengthRadioButton = new System.Windows.Forms.RadioButton();
             this.walkRadioButton = new System.Windows.Forms.RadioButton();
             this.runRadioButton = new System.Windows.Forms.RadioButton();
@@ -64,55 +64,55 @@
             this.surveysDataGridView.TabIndex = 60;
             this.surveysDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.surveysDataGridView_CellClick);
             // 
-            // indicator5CheckBox
+            // indicatorSkinElectricalConductivityCheckBox
             // 
-            this.indicator5CheckBox.AutoSize = true;
-            this.indicator5CheckBox.Location = new System.Drawing.Point(487, 361);
-            this.indicator5CheckBox.Name = "indicator5CheckBox";
-            this.indicator5CheckBox.Size = new System.Drawing.Size(159, 17);
-            this.indicator5CheckBox.TabIndex = 59;
-            this.indicator5CheckBox.Text = "Skin\'s electrical conductivity";
-            this.indicator5CheckBox.UseVisualStyleBackColor = true;
+            this.indicatorSkinElectricalConductivityCheckBox.AutoSize = true;
+            this.indicatorSkinElectricalConductivityCheckBox.Location = new System.Drawing.Point(487, 361);
+            this.indicatorSkinElectricalConductivityCheckBox.Name = "indicatorSkinElectricalConductivityCheckBox";
+            this.indicatorSkinElectricalConductivityCheckBox.Size = new System.Drawing.Size(159, 17);
+            this.indicatorSkinElectricalConductivityCheckBox.TabIndex = 59;
+            this.indicatorSkinElectricalConductivityCheckBox.Text = "Skin\'s electrical conductivity";
+            this.indicatorSkinElectricalConductivityCheckBox.UseVisualStyleBackColor = true;
             // 
-            // indicator4CheckBox
+            // indicatorHeartRateCheckBox
             // 
-            this.indicator4CheckBox.AutoSize = true;
-            this.indicator4CheckBox.Location = new System.Drawing.Point(408, 361);
-            this.indicator4CheckBox.Name = "indicator4CheckBox";
-            this.indicator4CheckBox.Size = new System.Drawing.Size(73, 17);
-            this.indicator4CheckBox.TabIndex = 58;
-            this.indicator4CheckBox.Text = "Heart rate";
-            this.indicator4CheckBox.UseVisualStyleBackColor = true;
+            this.indicatorHeartRateCheckBox.AutoSize = true;
+            this.indicatorHeartRateCheckBox.Location = new System.Drawing.Point(408, 361);
+            this.indicatorHeartRateCheckBox.Name = "indicatorHeartRateCheckBox";
+            this.indicatorHeartRateCheckBox.Size = new System.Drawing.Size(73, 17);
+            this.indicatorHeartRateCheckBox.TabIndex = 58;
+            this.indicatorHeartRateCheckBox.Text = "Heart rate";
+            this.indicatorHeartRateCheckBox.UseVisualStyleBackColor = true;
             // 
-            // indicator3CheckBox
+            // indicatorSkinHumidityCheckBox
             // 
-            this.indicator3CheckBox.AutoSize = true;
-            this.indicator3CheckBox.Location = new System.Drawing.Point(307, 361);
-            this.indicator3CheckBox.Name = "indicator3CheckBox";
-            this.indicator3CheckBox.Size = new System.Drawing.Size(95, 17);
-            this.indicator3CheckBox.TabIndex = 57;
-            this.indicator3CheckBox.Text = "Skin\'s humidity";
-            this.indicator3CheckBox.UseVisualStyleBackColor = true;
+            this.indicatorSkinHumidityCheckBox.AutoSize = true;
+            this.indicatorSkinHumidityCheckBox.Location = new System.Drawing.Point(307, 361);
+            this.indicatorSkinHumidityCheckBox.Name = "indicatorSkinHumidityCheckBox";
+            this.indicatorSkinHumidityCheckBox.Size = new System.Drawing.Size(95, 17);
+            this.indicatorSkinHumidityCheckBox.TabIndex = 57;
+            this.indicatorSkinHumidityCheckBox.Text = "Skin\'s humidity";
+            this.indicatorSkinHumidityCheckBox.UseVisualStyleBackColor = true;
             // 
-            // indicator2CheckBox
+            // indicatorSkinTemperatureCheckBox
             // 
-            this.indicator2CheckBox.AutoSize = true;
-            this.indicator2CheckBox.Location = new System.Drawing.Point(188, 361);
-            this.indicator2CheckBox.Name = "indicator2CheckBox";
-            this.indicator2CheckBox.Size = new System.Drawing.Size(113, 17);
-            this.indicator2CheckBox.TabIndex = 56;
-            this.indicator2CheckBox.Text = "Skin\'s temperature";
-            this.indicator2CheckBox.UseVisualStyleBackColor = true;
+            this.indicatorSkinTemperatureCheckBox.AutoSize = true;
+            this.indicatorSkinTemperatureCheckBox.Location = new System.Drawing.Point(188, 361);
+            this.indicatorSkinTemperatureCheckBox.Name = "indicatorSkinTemperatureCheckBox";
+            this.indicatorSkinTemperatureCheckBox.Size = new System.Drawing.Size(113, 17);
+            this.indicatorSkinTemperatureCheckBox.TabIndex = 56;
+            this.indicatorSkinTemperatureCheckBox.Text = "Skin\'s temperature";
+            this.indicatorSkinTemperatureCheckBox.UseVisualStyleBackColor = true;
             // 
-            // indicator1CheckBox
+            // indicatorBloodPressureCheckBox
             // 
-            this.indicator1CheckBox.AutoSize = true;
-            this.indicator1CheckBox.Location = new System.Drawing.Point(85, 361);
-            this.indicator1CheckBox.Name = "indicator1CheckBox";
-            this.indicator1CheckBox.Size = new System.Drawing.Size(97, 17);
-            this.indicator1CheckBox.TabIndex = 55;
-            this.indicator1CheckBox.Text = "Blood Pressure";
-            this.indicator1CheckBox.UseVisualStyleBackColor = true;
+            this.indicatorBloodPressureCheckBox.AutoSize = true;
+            this.indicatorBloodPressureCheckBox.Location = new System.Drawing.Point(85, 361);
+            this.indicatorBloodPressureCheckBox.Name = "indicatorBloodPressureCheckBox";
+            this.indicatorBloodPressureCheckBox.Size = new System.Drawing.Size(97, 17);
+            this.indicatorBloodPressureCheckBox.TabIndex = 55;
+            this.indicatorBloodPressureCheckBox.Text = "Blood Pressure";
+            this.indicatorBloodPressureCheckBox.UseVisualStyleBackColor = true;
             // 
             // strengthRadioButton
             // 
@@ -273,11 +273,11 @@
             this.Controls.Add(this.chooseSurveyButton);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.surveysDataGridView);
-            this.Controls.Add(this.indicator5CheckBox);
-            this.Controls.Add(this.indicator4CheckBox);
-            this.Controls.Add(this.indicator3CheckBox);
-            this.Controls.Add(this.indicator2CheckBox);
-            this.Controls.Add(this.indicator1CheckBox);
+            this.Controls.Add(this.indicatorSkinElectricalConductivityCheckBox);
+            this.Controls.Add(this.indicatorHeartRateCheckBox);
+            this.Controls.Add(this.indicatorSkinHumidityCheckBox);
+            this.Controls.Add(this.indicatorSkinTemperatureCheckBox);
+            this.Controls.Add(this.indicatorBloodPressureCheckBox);
             this.Controls.Add(this.strengthRadioButton);
             this.Controls.Add(this.walkRadioButton);
             this.Controls.Add(this.runRadioButton);
@@ -306,11 +306,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView surveysDataGridView;
-        private System.Windows.Forms.CheckBox indicator5CheckBox;
-        private System.Windows.Forms.CheckBox indicator4CheckBox;
-        private System.Windows.Forms.CheckBox indicator3CheckBox;
-        private System.Windows.Forms.CheckBox indicator2CheckBox;
-        private System.Windows.Forms.CheckBox indicator1CheckBox;
+        private System.Windows.Forms.CheckBox indicatorSkinElectricalConductivityCheckBox;
+        private System.Windows.Forms.CheckBox indicatorHeartRateCheckBox;
+        private System.Windows.Forms.CheckBox indicatorSkinHumidityCheckBox;
+        private System.Windows.Forms.CheckBox indicatorSkinTemperatureCheckBox;
+        private System.Windows.Forms.CheckBox indicatorBloodPressureCheckBox;
         private System.Windows.Forms.RadioButton strengthRadioButton;
         private System.Windows.Forms.RadioButton walkRadioButton;
         private System.Windows.Forms.RadioButton runRadioButton;

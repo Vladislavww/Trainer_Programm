@@ -21,7 +21,8 @@ namespace View
         private DoctorPatientForm _DoctorPatientView;
         private bool _closeWay; //true if closed by option Exit, false - otherwise
         private List<Series> _chartPointsList;
-        public AddDot _delegate;
+        delegate void AddDot(double x, double y, int chartIndex);
+        private AddDot _delegate;
 
         public DoctorPatientSurveyForm(EnterForm EnterView, DoctorPatientForm DoctorPatientView, patientFull.Survey survey)
         {
@@ -175,7 +176,7 @@ namespace View
             _DoctorPatientView.Show();
         }
 
-        private void startAndStopSurveyButton4_Click(object sender, EventArgs e)
+        private void startAndStopSurveyButton_Click(object sender, EventArgs e)
         {
             _presenter.changeSurveyGoing();
         }
