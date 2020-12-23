@@ -53,7 +53,7 @@
             // 
             // startAndStopSurveyButton4
             // 
-            this.startAndStopSurveyButton4.Location = new System.Drawing.Point(313, 258);
+            this.startAndStopSurveyButton4.Location = new System.Drawing.Point(340, 210);
             this.startAndStopSurveyButton4.Name = "startAndStopSurveyButton4";
             this.startAndStopSurveyButton4.Size = new System.Drawing.Size(229, 23);
             this.startAndStopSurveyButton4.TabIndex = 37;
@@ -63,22 +63,23 @@
             // 
             // sensorTypeComboBox
             // 
+            this.sensorTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sensorTypeComboBox.FormattingEnabled = true;
-            this.sensorTypeComboBox.Location = new System.Drawing.Point(619, 95);
+            this.sensorTypeComboBox.Location = new System.Drawing.Point(760, 73);
             this.sensorTypeComboBox.Name = "sensorTypeComboBox";
             this.sensorTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.sensorTypeComboBox.TabIndex = 36;
             // 
             // sensorNameTextBox
             // 
-            this.sensorNameTextBox.Location = new System.Drawing.Point(619, 67);
+            this.sensorNameTextBox.Location = new System.Drawing.Point(760, 45);
             this.sensorNameTextBox.Name = "sensorNameTextBox";
             this.sensorNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.sensorNameTextBox.TabIndex = 35;
             // 
             // activateSensorButton
             // 
-            this.activateSensorButton.Location = new System.Drawing.Point(343, 147);
+            this.activateSensorButton.Location = new System.Drawing.Point(484, 125);
             this.activateSensorButton.Name = "activateSensorButton";
             this.activateSensorButton.Size = new System.Drawing.Size(104, 23);
             this.activateSensorButton.TabIndex = 34;
@@ -88,7 +89,7 @@
             // 
             // addSensorButton
             // 
-            this.addSensorButton.Location = new System.Drawing.Point(511, 134);
+            this.addSensorButton.Location = new System.Drawing.Point(652, 112);
             this.addSensorButton.Name = "addSensorButton";
             this.addSensorButton.Size = new System.Drawing.Size(109, 23);
             this.addSensorButton.TabIndex = 33;
@@ -99,7 +100,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(511, 95);
+            this.label11.Location = new System.Drawing.Point(652, 73);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 13);
             this.label11.TabIndex = 32;
@@ -108,7 +109,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(508, 67);
+            this.label13.Location = new System.Drawing.Point(649, 45);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 13);
             this.label13.TabIndex = 31;
@@ -116,7 +117,7 @@
             // 
             // deleteSensorButton
             // 
-            this.deleteSensorButton.Location = new System.Drawing.Point(343, 176);
+            this.deleteSensorButton.Location = new System.Drawing.Point(484, 154);
             this.deleteSensorButton.Name = "deleteSensorButton";
             this.deleteSensorButton.Size = new System.Drawing.Size(104, 23);
             this.deleteSensorButton.TabIndex = 30;
@@ -127,7 +128,7 @@
             // sensorConditionLabel
             // 
             this.sensorConditionLabel.AutoSize = true;
-            this.sensorConditionLabel.Location = new System.Drawing.Point(435, 120);
+            this.sensorConditionLabel.Location = new System.Drawing.Point(576, 98);
             this.sensorConditionLabel.Name = "sensorConditionLabel";
             this.sensorConditionLabel.Size = new System.Drawing.Size(68, 13);
             this.sensorConditionLabel.TabIndex = 29;
@@ -136,7 +137,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(342, 120);
+            this.label6.Location = new System.Drawing.Point(483, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 28;
@@ -145,7 +146,7 @@
             // sensorTypeLabel
             // 
             this.sensorTypeLabel.AutoSize = true;
-            this.sensorTypeLabel.Location = new System.Drawing.Point(412, 93);
+            this.sensorTypeLabel.Location = new System.Drawing.Point(553, 71);
             this.sensorTypeLabel.Name = "sensorTypeLabel";
             this.sensorTypeLabel.Size = new System.Drawing.Size(68, 13);
             this.sensorTypeLabel.TabIndex = 27;
@@ -154,7 +155,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(342, 93);
+            this.label4.Location = new System.Drawing.Point(483, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 26;
@@ -163,7 +164,7 @@
             // sensorNameLabel
             // 
             this.sensorNameLabel.AutoSize = true;
-            this.sensorNameLabel.Location = new System.Drawing.Point(414, 65);
+            this.sensorNameLabel.Location = new System.Drawing.Point(555, 43);
             this.sensorNameLabel.Name = "sensorNameLabel";
             this.sensorNameLabel.Size = new System.Drawing.Size(68, 13);
             this.sensorNameLabel.TabIndex = 25;
@@ -172,7 +173,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(339, 65);
+            this.label2.Location = new System.Drawing.Point(480, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 24;
@@ -181,7 +182,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 51);
+            this.label1.Location = new System.Drawing.Point(54, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 23;
@@ -207,9 +208,10 @@
             // sensorsDataGridView
             // 
             this.sensorsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sensorsDataGridView.Location = new System.Drawing.Point(77, 79);
+            this.sensorsDataGridView.Location = new System.Drawing.Point(57, 54);
             this.sensorsDataGridView.Name = "sensorsDataGridView";
-            this.sensorsDataGridView.Size = new System.Drawing.Size(240, 150);
+            this.sensorsDataGridView.ReadOnly = true;
+            this.sensorsDataGridView.Size = new System.Drawing.Size(403, 150);
             this.sensorsDataGridView.TabIndex = 38;
             this.sensorsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sensorsDataGridView_CellClick);
             // 
@@ -218,12 +220,13 @@
             this.chartTableLayoutPanel.ColumnCount = 2;
             this.chartTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.chartTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.chartTableLayoutPanel.Location = new System.Drawing.Point(88, 316);
+            this.chartTableLayoutPanel.Location = new System.Drawing.Point(12, 239);
             this.chartTableLayoutPanel.Name = "chartTableLayoutPanel";
-            this.chartTableLayoutPanel.RowCount = 2;
+            this.chartTableLayoutPanel.RowCount = 3;
             this.chartTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.chartTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.chartTableLayoutPanel.Size = new System.Drawing.Size(753, 216);
+            this.chartTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106F));
+            this.chartTableLayoutPanel.Size = new System.Drawing.Size(897, 331);
             this.chartTableLayoutPanel.TabIndex = 41;
             // 
             // DoctorPatientSurveyForm

@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAllPatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchPatienttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientNameLabel = new System.Windows.Forms.Label();
             this.choosePatientButton = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.patientsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.patientsDataGridView.Location = new System.Drawing.Point(12, 49);
             this.patientsDataGridView.Name = "patientsDataGridView";
+            this.patientsDataGridView.ReadOnly = true;
             this.patientsDataGridView.Size = new System.Drawing.Size(621, 340);
             this.patientsDataGridView.TabIndex = 3;
             this.patientsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientsDataGridView_CellClick);
@@ -63,8 +63,7 @@
             // patientsToolStripMenuItem
             // 
             this.patientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showAllPatientsToolStripMenuItem,
-            this.searchPatienttoolStripMenuItem1});
+            this.showAllPatientsToolStripMenuItem});
             this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
             this.patientsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.patientsToolStripMenuItem.Text = "Patients";
@@ -75,13 +74,6 @@
             this.showAllPatientsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.showAllPatientsToolStripMenuItem.Text = "Show all patients (update)";
             this.showAllPatientsToolStripMenuItem.Click += new System.EventHandler(this.showAllPatientsToolStripMenuItem_Click);
-            // 
-            // searchPatienttoolStripMenuItem1
-            // 
-            this.searchPatienttoolStripMenuItem1.Name = "searchPatienttoolStripMenuItem1";
-            this.searchPatienttoolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
-            this.searchPatienttoolStripMenuItem1.Text = "Search patient";
-            this.searchPatienttoolStripMenuItem1.Click += new System.EventHandler(this.searchPatienttoolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -135,7 +127,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAllPatientsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchPatienttoolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label patientNameLabel;
         private System.Windows.Forms.Button choosePatientButton;

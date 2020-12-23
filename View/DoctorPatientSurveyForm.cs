@@ -57,6 +57,12 @@ namespace View
             newChart.Dock = DockStyle.Fill;
             newChart.Titles.Add(name + "-" + type);
             newChart.ChartAreas.Add(new ChartArea(name));
+            Axis ax = new Axis();
+            ax.Title = "Time, s";
+            Axis ay = new Axis();
+            ay.Title = "Value";
+            newChart.ChartAreas[0].AxisX = ax;
+            newChart.ChartAreas[0].AxisY = ay;
             Series newSeriesOfPoint = new Series();
             newSeriesOfPoint.ChartType = SeriesChartType.Line;
             newSeriesOfPoint.ChartArea = name;

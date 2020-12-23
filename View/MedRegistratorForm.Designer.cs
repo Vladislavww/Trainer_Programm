@@ -32,7 +32,6 @@
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAllPatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchPatientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteThisPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PatientsDataGridView = new System.Windows.Forms.DataGridView();
@@ -58,7 +57,6 @@
             this.patientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showAllPatientsToolStripMenuItem,
             this.addNewPatientToolStripMenuItem,
-            this.searchPatientToolStripMenuItem1,
             this.deleteThisPatientToolStripMenuItem});
             this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
             this.patientsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -77,13 +75,6 @@
             this.addNewPatientToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.addNewPatientToolStripMenuItem.Text = "Add new patient";
             this.addNewPatientToolStripMenuItem.Click += new System.EventHandler(this.addNewPatientToolStripMenuItem_Click);
-            // 
-            // searchPatientToolStripMenuItem1
-            // 
-            this.searchPatientToolStripMenuItem1.Name = "searchPatientToolStripMenuItem1";
-            this.searchPatientToolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
-            this.searchPatientToolStripMenuItem1.Text = "Search patient";
-            this.searchPatientToolStripMenuItem1.Click += new System.EventHandler(this.searchPatientToolStripMenuItem1_Click);
             // 
             // deleteThisPatientToolStripMenuItem
             // 
@@ -104,6 +95,7 @@
             this.PatientsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PatientsDataGridView.Location = new System.Drawing.Point(22, 58);
             this.PatientsDataGridView.Name = "PatientsDataGridView";
+            this.PatientsDataGridView.ReadOnly = true;
             this.PatientsDataGridView.Size = new System.Drawing.Size(621, 185);
             this.PatientsDataGridView.TabIndex = 0;
             this.PatientsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientsDataGridView_CellClick);
@@ -153,7 +145,6 @@
         private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAllPatientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPatientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchPatientToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deleteThisPatientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.DataGridView PatientsDataGridView;

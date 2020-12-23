@@ -38,8 +38,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoctorPatientSurveyGraphic.cs" />
-    <Compile Include="IDoctorPatientSurveyPresenter.cs" />
+    <Compile Include="Interfaces\IEmulator.cs" />
+    <Compile Include="Emulators\EmulatorBloodPressure.cs" />
+    <Compile Include="EmulatorsCreators\EmulatorBloodPressureCreator.cs" />
+    <Compile Include="Emulators\EmulatorHeartRate.cs" />
+    <Compile Include="EmulatorsCreators\EmulatorHeartRateCreator.cs" />
+    <Compile Include="Interfaces\IEmulatorCreator.cs" />
+    <Compile Include="Emulators\EmulatorSkinElecticalConductivity.cs" />
+    <Compile Include="EmulatorsCreators\EmulatorSkinElecticalConductivityCreator.cs" />
+    <Compile Include="Emulators\EmulatorSkinHumidity.cs" />
+    <Compile Include="EmulatorsCreators\EmulatorSkinHumidityCreator.cs" />
+    <Compile Include="Emulators\EmulatorSkinTemperature.cs" />
+    <Compile Include="EmulatorsCreators\EmulatorSkinTemperatureCreator.cs" />
+    <Compile Include="GetEmulator.cs" />
+    <Compile Include="Interfaces\IDoctorPatientSurveyPresenterEmulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -12,15 +12,15 @@ namespace Service
     {
         patientFull.Survey _survey;
         List<SensorStruct> _sensors;
-        IDoctorPatientSurveyPresenter _presenter;
-        List<DoctorPatientSurveyGraphic> _pointSources;
+        IDoctorPatientSurveyPresenterEmulator _presenter;
+        List<IEmulator> _pointSources;
 
-        public DoctorPatientSurveyService(IDoctorPatientSurveyPresenter presenter, patientFull.Survey survey)
+        public DoctorPatientSurveyService(IDoctorPatientSurveyPresenterEmulator presenter, patientFull.Survey survey)
         {
             _survey = survey;
             _presenter = presenter;
             _sensors = new List<SensorStruct>();
-            _pointSources = new List<DoctorPatientSurveyGraphic>();
+            _pointSources = new List<IEmulator>();
         }
 
         /*public DoctorPatientSurveyService(patientFull.Survey survey)
@@ -34,7 +34,7 @@ namespace Service
             List<String> toReturn = new List<String>();
             if (_survey.sensors.sensor1 == true)
             {
-                toReturn.Add("Blood Pressure");
+                toReturn.Add("Blood pressure");
             }
             if (_survey.sensors.sensor2 == true)
             {
@@ -76,7 +76,8 @@ namespace Service
             {
                 if (element.condition == true)
                 {
-                    DoctorPatientSurveyGraphic newPointSource = new DoctorPatientSurveyGraphic(_presenter, index);
+                    //DoctorPatientSurveyGraphic newPointSource = new DoctorPatientSurveyGraphic(_presenter, index);
+                    IEmulator newPointSource = (new GetEmulator(_presenter, index, element.type)).getEmulator();
                     _pointSources.Add(newPointSource);
                     newPointSource.startWritingGraphic();
                     index += 1;

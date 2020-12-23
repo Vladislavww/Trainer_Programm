@@ -9,7 +9,7 @@ using EmulationGraphicData;
 
 namespace Presenter
 {
-    public class DoctorPatientSurveyPresenter : IDoctorPatientSurveyPresenter
+    public class DoctorPatientSurveyPresenter : IDoctorPatientSurveyPresenterEmulator
     {
         IDoctorPatientSurveyForm _view;
         DoctorPatientSurveyService _service;

@@ -279,6 +279,7 @@
             this.surveysDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.surveysDataGridView.Location = new System.Drawing.Point(27, 171);
             this.surveysDataGridView.Name = "surveysDataGridView";
+            this.surveysDataGridView.ReadOnly = true;
             this.surveysDataGridView.Size = new System.Drawing.Size(509, 95);
             this.surveysDataGridView.TabIndex = 37;
             this.surveysDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.surveysGridView_CellClick);

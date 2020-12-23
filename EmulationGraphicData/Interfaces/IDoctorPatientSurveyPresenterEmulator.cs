@@ -7,7 +7,7 @@ using Entity;
 
 namespace EmulationGraphicData
 {
-    public interface IDoctorPatientSurveyPresenter
+    public interface IDoctorPatientSurveyPresenterEmulator
     {
         void addDotToChart(double x, double y, int chartNum);
     }
