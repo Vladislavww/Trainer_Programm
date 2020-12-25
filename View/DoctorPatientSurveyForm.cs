@@ -92,6 +92,11 @@ namespace View
             MessageBox.Show("Sensors' names must be uniqe", "Warning");
         }
 
+        public void showContinueSurveyError()
+        {
+            MessageBox.Show("Stop the survey first", "Warning");
+        }
+
         public void addSensorToSensorsDataGridView(String name, String type, String condition)
         {
             DataGridViewRow row = new DataGridViewRow();
@@ -110,6 +115,19 @@ namespace View
         public void activateSelectedSensor()
         {
             sensorsDataGridView.CurrentRow.Cells[2].Value = "OK";
+        }
+
+        public void showSurveyError(int chartIndex)
+        {
+            try
+            {
+                String name = sensorsDataGridView.Rows[chartIndex].Cells[0].Value.ToString();
+                MessageBox.Show("Sensor " + name + " is down", "Warning");
+            }
+            catch
+            {
+                Console.WriteLine("There was an error with 'showSurveyError'");
+            }
         }
 
         private void addDot(double x, double y, int chartIndex)

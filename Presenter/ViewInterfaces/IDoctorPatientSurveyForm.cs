@@ -14,6 +14,7 @@ namespace Presenter
         void addSensorToSensorsDataGridView(String name, String type, String condition);
         void showNewSensorError();
         void showNameSensorError();
+        void showContinueSurveyError();
         void deleteSelectedRow();
         void activateSelectedSensor();
         void addChart(String name, String type);

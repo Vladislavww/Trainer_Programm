@@ -30,34 +30,55 @@ namespace Presenter
 
         public void addNewSensor(String name, String type)
         {
-            if (!name.Equals("") && !type.Equals(""))
+            if (_surveyGoing == false)
             {
-                if (_service.checkName(name) == true)
+                if (!name.Equals("") && !type.Equals(""))
                 {
-                    _service.addSensor(name, type);
-                    _view.addSensorToSensorsDataGridView(name, type, "Bad");
+                    if (_service.checkName(name) == true)
+                    {
+                        _service.addSensor(name, type);
+                        _view.addSensorToSensorsDataGridView(name, type, "Bad");
+                    }
+                    else
+                    {
+                        _view.showNameSensorError();
+                    }
                 }
                 else
                 {
-                    _view.showNameSensorError();
+                    _view.showNewSensorError();
                 }
             }
             else
             {
-                _view.showNewSensorError();
+                _view.showContinueSurveyError();
             }
         }
 
         public void deleteSensor(String name)
         {
-            _service.deleteSensor(name);
-            _view.deleteSelectedRow();
+            if (_surveyGoing == false)
+            {
+                _service.deleteSensor(name);
+                _view.deleteSelectedRow();
+            }
+            else
+            {
+                _view.showContinueSurveyError();
+            }
         }
 
         public void activateSensor(String name)
         {
-            _service.activateSensor(name);
-            _view.activateSelectedSensor();
+            if (_surveyGoing == false)
+            {
+                _service.activateSensor(name);
+                _view.activateSelectedSensor();
+            }
+            else
+            {
+                _view.showContinueSurveyError();
+            }
         }
 
         public void changeSurveyGoing()
