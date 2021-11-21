@@ -10,9 +10,3 @@ Trainer_Programm - это программа для считывания дат�
 <li>Старт сеанса обследования;</li>
 <li>Вывод на экран в режиме реального времени измеряемых физиологических показателей (в данной программе физиологические показатели генерируются случайным образом).</li>
 </ul>
-<P align="left">Анализ требований:</P>
-<P><img src="https://github.com/Vladislavww/Trainer_Programm/tree/master/Documentation/Training_Use_case_diagram.png"></img></P>
-<P align="left">Некоторые подробно рассмотренные диаграммы активности:</P>
-<P><img src="https://github.com/Vladislavww/Trainer_Programm/Documentation/CRUD_Diagram.png"></img></P>
-<P><img src="https://github.com/Vladislavww/Trainer_Programm/Documentation/Choose_patient_Diagramm.png"></img></P>
-<P><img src="https://github.com/Vladislavww/Trainer_Programm/Documentation/Graphics_Diagram.png"></img></P>
